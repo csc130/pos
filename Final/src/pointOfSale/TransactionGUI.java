@@ -30,6 +30,8 @@ public class TransactionGUI extends JPanel implements ActionListener
 	private JPanel logoPanel = new JPanel(new GridLayout(1,1));
 	private ItemPanel menuPanel = new ItemPanel();
 	private JPanel checkoutButtonPanel = new JPanel(new GridLayout(3,1));
+	//Discount button
+	private MenuButton discountButton = new MenuButton("Discount", "Discount", this);
 	private MenuButton systemButton = new MenuButton("System","System",this);
 	private MenuButton checkoutButton = new MenuButton("Checkout","Checkout",this);
 	private JLabel adminLabel = new JLabel("Admin: ", SwingConstants.RIGHT);
@@ -60,6 +62,8 @@ public class TransactionGUI extends JPanel implements ActionListener
 		receiptButtonPanel.add(new MenuButton("Delete All","Delete All",this));
 		receiptButtonPanel.add(new MenuButton("Log Off","Log Off",this));;
 		receiptButtonPanel.add(adminLabel);
+		//Add discount button to Receipt Panel
+		receiptButtonPanel.add(discountButton);
 		receiptButtonPanel.add(systemButton);
 		receiptButtonPanel.add(new MenuButton("Categories","Categories",this));
 		Tools.addBlankSpace(receiptButtonPanel,6);
@@ -86,11 +90,14 @@ public class TransactionGUI extends JPanel implements ActionListener
 		{
 			adminLabel.setVisible(true);
 			systemButton.setVisible(true);
+			//Set Discount Button admin only
+			discountButton.setVisible(true);
 		}
 		else
 		{
 			adminLabel.setVisible(false);
 			systemButton.setVisible(false);
+			discountButton.setVisible(false);
 		}
 		
 		add(halfPanel);

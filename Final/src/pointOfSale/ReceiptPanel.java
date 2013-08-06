@@ -24,6 +24,8 @@ public class ReceiptPanel extends JPanel
 	private static final String RECEIPT_PATH = "Files/Receipts/";
 	private static final String RECEIPT_LIST_FILE = RECEIPT_PATH + "ReceiptList";
 	private static final String TAX_FILE = "Files/Tax/SalesTax";
+	//Add file path for discount amount
+	private static final String DISCOUNT_File = "Files/Tax/Discount";
 	private static final Color DARK_CHAMPAGNE = new Color(194, 178, 128);
 	private static final  Color PALE_GOLDENROD = new Color(238,232,170);
 	
