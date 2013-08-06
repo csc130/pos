@@ -36,6 +36,8 @@ public class ReceiptPanel extends JPanel
 	private static long totalAmount = 0;
 	private static String newReceipt = "";
 	private static double salesTax=0;
+	//Add discount
+	private static double discount=0;
 	
 	/**
 	 * Constructs the ReceiptPanel.  Sets the initial conditions of the panel and the receiptList JList object.
@@ -67,7 +69,7 @@ public class ReceiptPanel extends JPanel
 		subtotalAmount = subtotalAmount + Integer.parseInt(itemPrice);
 		updateTotals();
 		
-		if(listModel.getSize() > 1)
+		if(listModel.getSize() > 1)http://shine.yahoo.com/pets/cat-allergy-breakthrough-kitty-hug-today-170300778.html
 			for(int count=0; count < 4; count++)
 				listModel.removeElementAt(listModel.getSize()-1);
 		listModel.addElement(Tools.toMoney(itemPrice) + manualTab(itemPrice) + itemName);
